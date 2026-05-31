@@ -1,4 +1,5 @@
 import { Database } from "lucide-react";
+import logoSrc from "../../assets/ircc-stats-logo.jpg";
 import { formatSourceDate } from "../../lib/formatters";
 import type { DatasetMetadata } from "../../types/datasets";
 
@@ -19,6 +20,13 @@ export function AppHeader({ latestYear, populationMetadata, immigrationMetadata 
       <div className="mx-auto flex max-w-7xl flex-col gap-5 px-4 py-7 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-3xl">
+            <img
+              src={logoSrc}
+              alt="IRCC Stats - Canadian Population & Immigration Insights"
+              width="800"
+              height="266"
+              className="mb-4 h-auto w-full max-w-md rounded-md bg-white object-contain p-1 shadow-sm"
+            />
             <p className="mb-2 text-sm font-semibold uppercase tracking-normal text-maple dark:text-wheat">
               Public data dashboard
             </p>
