@@ -27,6 +27,7 @@
     "data:all": "npm run data:population && npm run data:population-age && npm run data:population-components && npm run data:immigration && npm run data:breakdowns && npm run data:temporary && npm run data:economic && npm run validate:data"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "lucide-react": "^0.475.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

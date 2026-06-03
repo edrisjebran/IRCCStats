@@ -1,4 +1,5 @@
 import { lazy, Suspense } from "react";
+import { Analytics } from "@vercel/analytics/react";
 import { PopulationAreaChart } from "./components/charts/PopulationAreaChart";
 import { ImmigrationStackedBarChart } from "./components/charts/ImmigrationStackedBarChart";
 import { ImmigrationRateLineChart } from "./components/charts/ImmigrationRateLineChart";
@@ -126,16 +127,19 @@ export default function App() {
   const maxYear = Math.min(Math.max(...populationYears), Math.max(...immigrationYears));
 
   return (
-    <Dashboard
-      minYear={minYear}
-      maxYear={maxYear}
-      theme={theme}
-      onThemeChange={setTheme}
-      population={population.data}
-      populationComponents={populationComponents.data}
-      immigration={immigration.data}
-      countryOverview={countryOverview.data}
-    />
+    <>
+      <Dashboard
+        minYear={minYear}
+        maxYear={maxYear}
+        theme={theme}
+        onThemeChange={setTheme}
+        population={population.data}
+        populationComponents={populationComponents.data}
+        immigration={immigration.data}
+        countryOverview={countryOverview.data}
+      />
+      <Analytics />
+    </>
   );
 }
 
